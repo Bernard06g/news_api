@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:news_api/view/record.dart';
 import 'package:news_api/view/home_page.dart';
 
 void main() {
@@ -10,9 +11,12 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
+    return MaterialApp(
+      routes: {
+        '/UserRecord': (context)=> const UserRecord(),
+      },
       debugShowCheckedModeBanner: false,
-      home: HomePage(),
+      home: const HomePage(),
     );
   }
 }
